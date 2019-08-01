@@ -23,6 +23,7 @@ public class LibraryController {
 
 	@RequestMapping(method = RequestMethod.POST, path = "/library/book")
 	public ResponseEntity<Book> add(@RequestBody Book book, UriComponentsBuilder builder) {
+		service.add(book);
 		HttpHeaders headers = new HttpHeaders();
 		headers.setLocation(builder.path("/library/book/{isbn}").buildAndExpand(book.getIsbn()).toUri());
 		return new ResponseEntity<Book>(book, headers, HttpStatus.OK);

@@ -9,10 +9,6 @@ spec:
     -
       name: library
       image: glarimy/library
-      env:
-        -
-		  name: spring.datasource.url
-          value: "jdbc:mysql://mysql-service.nl-amis-testing/glarimy?allowPublicKeyRetrieval=true&useSSL=false"
       ports:
         -
           containerPort: 8080

@@ -1,11 +1,11 @@
-package com.glarimy;
+package com.glarimy.bank;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GlarimyService {
+public class GlarimyBankService {
 	public static void main(String[] args) {
-		SpringApplication.run(GlarimyService.class, args);
+		SpringApplication.run(GlarimyBankService.class, args);
 	}
 }

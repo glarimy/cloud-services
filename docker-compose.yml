@@ -5,15 +5,15 @@ services:
     image: mysql:latest
     ports:
     - 3306:3306
-	networks:
-	- glarimy
+    networks:
+    - glarimy
 
   glarimy/library:
     image: glarimy/library:latest
     ports:
     - 8001:8080
-	networks:
-	- glarimy
+    networks:
+    - glarimy
     entrypoint: "java -Dspring.datasource.url=jdbc:mysql://mysqldb:3306/glarimy?useSSL=false&allowPublicKeyRetrieval=true -jar /glarimy-service-0.0.1.jar"
 
 networks:
